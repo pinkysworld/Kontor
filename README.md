@@ -1,6 +1,6 @@
 # Kontor website
 
-Static, responsive DE/EN public website for Kontor. Intended URL: https://minh.systems/Kontor/ . Deployment is pending until GitHub Pages has been configured and the live site verified. No build system or dependencies. No analytics, cookies, remotely loaded fonts, scripts or embedded services. A language preference is stored locally as `kontor-language`.
+Static, responsive DE/EN public website for Kontor. Published URL: https://minh.systems/Kontor/ . GitHub Pages serves main / with HTTPS enforced. The public landing/support/privacy pages and final Pages build were verified on 23 October 2026. No build system or dependencies. No analytics, cookies, remotely loaded fonts, scripts or embedded services. A language preference is stored locally as `kontor-language`.
 
 ## Preview
 
@@ -21,3 +21,7 @@ Open http://localhost:8080/ . Test all three pages in DE/EN, desktop and mobile.
 - Public availability deliberately says “in preparation” for iPad and Mac. No live Store badge, purchase link, launch date, pricing, ratings or testimonial. Historical insurance is fictional gameplay, not a financial service.
 
 The game project and Summgarten reference have not been modified by this website implementation.
+
+## Verification
+
+Three pages × DE/EN × mobile390px / desktop1440px checked in the browser; no horizontal overflow. The studio logo is 320CSSpx (formerly160), constrained to available width. All five images were verified loaded after entering the gallery. An initial `complete=false` on below-fold loading=lazy images was a pending-load observation, not a missing path; both cited assets also returned HTTP200 and byte-for-byte file matches. Support and privacy returned HTTPS200 after publication.
