@@ -8,6 +8,8 @@
     language = next;
     document.documentElement.lang = next;
     document.querySelectorAll('[data-set-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.setLang === next)));
+    document.querySelectorAll('[data-src-de]').forEach(img => img.src = img.dataset[next === 'de' ? 'srcDe' : 'srcEn']);
+    document.querySelectorAll('[data-href-de]').forEach(link => link.href = link.dataset[next === 'de' ? 'hrefDe' : 'hrefEn']);
     document.querySelectorAll('[data-alt-de]').forEach(img => img.alt = img.dataset[next === 'de' ? 'altDe' : 'altEn']);
     document.querySelectorAll('[data-nav-label]').forEach(nav => nav.setAttribute('aria-label', next === 'de' ? 'Hauptnavigation' : 'Main navigation'));
     const page = location.pathname.split('/').pop();
