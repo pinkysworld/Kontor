@@ -1,6 +1,6 @@
 # Kontor website
 
-Static, responsive DE/EN public website for Kontor. Intended URL: https://pinkysworld.github.io/Kontor/ . Deployment is pending until GitHub Pages has been configured and the live site verified. No build system or dependencies. No analytics, cookies, remotely loaded fonts, scripts or embedded services. A language preference is stored locally as `kontor-language`.
+Static, responsive DE/EN public website for Kontor. Intended URL: https://minh.systems/Kontor/ . Deployment is pending until GitHub Pages has been configured and the live site verified. No build system or dependencies. No analytics, cookies, remotely loaded fonts, scripts or embedded services. A language preference is stored locally as `kontor-language`.
 
 ## Preview
 
