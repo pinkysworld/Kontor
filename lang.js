@@ -2,6 +2,9 @@
 (() => {
   let language = 'de';
   try { language = localStorage.getItem('kontor-language') || (navigator.language.startsWith('de') ? 'de' : 'en'); } catch (_) { /* Storage can be disabled. */ }
+  // ?lang=en / ?lang=de gives each language its own linkable URL (hreflang).
+  const requested = new URLSearchParams(location.search).get('lang');
+  if (requested) language = requested;
   if (!['de', 'en'].includes(language)) language = 'de';
   document.documentElement.lang = language;
   function apply(next, persist) {
@@ -22,7 +25,7 @@
     document.querySelectorAll('[data-alt-de]').forEach(img => img.alt = img.dataset[next === 'de' ? 'altDe' : 'altEn']);
     document.querySelectorAll('[data-nav-label]').forEach(nav => nav.setAttribute('aria-label', next === 'de' ? 'Hauptnavigation' : 'Main navigation'));
     const page = location.pathname.split('/').pop();
-    document.title = (page === 'imprint.html' ? (next === 'de' ? 'Impressum' : 'Legal notice') : page === 'privacy.html' ? (next === 'de' ? 'Datenschutz' : 'Privacy policy') : page === 'support.html' ? 'Support' : next === 'de' ? 'Dein Siegel. Dein Risiko.' : 'Your seal. Your risk.') + ' · Kontor';
+    document.title = page === 'imprint.html' ? (next === 'de' ? 'Impressum' : 'Legal notice') + ' · Kontor' : page === 'privacy.html' ? (next === 'de' ? 'Datenschutz' : 'Privacy policy') + ' · Kontor' : page === 'support.html' ? 'Support · Kontor' : next === 'de' ? 'Kontor – Assekuradeur · Hamburg 1600' : 'Kontor – The Underwriter · Hamburg 1600';
     if (persist) { try { localStorage.setItem('kontor-language', next); } catch (_) {} }
   }
   document.addEventListener('DOMContentLoaded', () => {

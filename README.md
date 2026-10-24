@@ -25,3 +25,8 @@ The game project and Summgarten reference have not been modified by this website
 ## Verification
 
 Three pages × DE/EN × mobile390px / desktop1440px checked in the browser; no horizontal overflow. The studio logo is 320CSSpx (formerly160), constrained to available width. All five images were verified loaded after entering the gallery. An initial `complete=false` on below-fold loading=lazy images was a pending-load observation, not a missing path; both cited assets also returned HTTP200 and byte-for-byte file matches. Support and privacy returned HTTPS200 after publication.
+
+## Launch-Checkliste
+
+- App-Store-Badge: im Abschnitt „closing“ von `index.html` den auskommentierten Badge-Block aktivieren (offizielle Apple-Badges, App-ID eintragen) und „In Vorbereitung“ in Hero, Abschluss und `support.html` ersetzen.
+- Bilder: Die Seite nutzt WebP; die PNG-Originale bleiben für `og:image` und als Quelle liegen.
